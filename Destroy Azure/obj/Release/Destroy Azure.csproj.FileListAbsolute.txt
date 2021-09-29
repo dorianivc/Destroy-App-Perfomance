@@ -82,3 +82,4 @@ C:\Users\dorianivc\Desktop\Destroy Azure\Destroy Azure\obj\Release\Destroy Azure
 C:\Users\dorianivc\Desktop\Destroy Azure\Destroy Azure\obj\Release\Destroy Azure.csproj.CopyComplete
 C:\Users\dorianivc\Desktop\Destroy Azure\Destroy Azure\obj\Release\Destroy Azure.dll
 C:\Users\dorianivc\Desktop\Destroy Azure\Destroy Azure\obj\Release\Destroy Azure.pdb
+C:\Users\dorianivc\Desktop\Destroy Azure\Destroy Azure\obj\Release\Destroy Azure.csprojAssemblyReference.cache
