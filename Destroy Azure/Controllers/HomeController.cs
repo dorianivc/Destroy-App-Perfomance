@@ -34,9 +34,9 @@ namespace Destroy_Azure.Controllers
         }
         public async System.Threading.Tasks.Task<ActionResult> SpikeTCP()//TCP
         {
-           
-            while (true)
-            {
+
+             while (true)
+          {
                 //TcpClient tcpClient = new TcpClient();
                 //IPAddress ipAddress = Dns.GetHostEntry("www.google.com").AddressList[0];
                 //IPEndPoint ipEndPoint = new IPEndPoint(ipAddress, 80);

@@ -6,6 +6,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjxgcM1uCoEaHTedpwHkH1gAAAAACAAAAAAAQZgAAAAEAACAAAAAEaW+Snu1hkJnZ/CfrqmPmyn7tbLFQ4rly6geqdoulXQAAAAAOgAAAAAIAACAAAAA0wkJkq8yO4QGvfVHpn18JlY0JkpvcDVTkTYDglwToBIAAAAD97uCEnHO08JO8PrwBwa4MFv+hHFLNFxqeCzOXty47YMeDXIBSoGHLCQh8AcAwU1btevmZ2KqK9WQA/DMWzcVtjF4Z+FXTUSmvX1uXhCp9tUcSS3duelVsJS0oGuZTyoq2rDbedZRm332OPizgdeBtEBhM17MwescDr0NginJUsEAAAAD6jTmBnwnzV2AiHvlpdArrVb8Mitg+ELYUDQ5GJW541bToKBZ33p2niswxMKip3JN1HHzBZGgOHjeIsIep1Hwh</EncryptedPassword>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjxgcM1uCoEaHTedpwHkH1gAAAAACAAAAAAAQZgAAAAEAACAAAAB7FXn6XHVhRCe8us8URS/x0goJo9SWo1tNrP+PxcbbqQAAAAAOgAAAAAIAACAAAACWrPEGTlt+E8nwAayphCt8zOorpsCLEPUsTbr0wjcVU4AAAAB2cxhwZVzObyoGS6L0ii5TAcYJobQcy4gI20cnFVMhl/RuKTRtbEo37s5uSsYrR7M1nNOE+lwSjkouMmyUdjwF15Aa+wQfyNjTnD+PVAjXhi5GPNadHEzquq0vo3dYp1OuuJaK9fhiNq3F2v/KzNa7m4oh1xAkmEiePsSQbSi6xUAAAAD9S6p/1/mGeoUQYDbf9i93z5DnrSAV3Ekw16M/T7uVfiUnywxSPNF3VboeDkaV8UGqKEQKkGJNlFk3ipHUvu89</EncryptedPassword>
+    <_PublishTargetUrl>ftp://waws-prod-blu-251.ftp.azurewebsites.windows.net/site/wwwroot</_PublishTargetUrl>
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="PrintConnectionsSummary.aspx">
+      <publishTime>10/01/2021 20:47:58</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>09/29/2021 02:03:43</publishTime>
+    </File>
+  </ItemGroup>
 </Project>

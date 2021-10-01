@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Debug="true" %>
 
 <%@ Import Namespace="System.Reflection" %>
 <%@ Import Namespace="System.Net" %>
@@ -55,24 +55,31 @@
 
         string strConnection = string.Empty;
         string strConnectionServicePointCount = string.Empty;
-        public static DataTable dtConnection;
+        public static DataTable dtConnection= new DataTable();
+        public static DataRow  dRow=dtConnection.NewRow();
 
-        DataRow dRow;
+        public static void init()
+        {
+            if (!dRow.Table.Columns.Contains("Service_Point"))
+            {
+
+                dRow.Table.Columns.Add("Service_Point", typeof(string));
+                dRow.Table.Columns.Add("Connection_Limit", typeof(int));
+                dRow.Table.Columns.Add("Reported_Connections", typeof(int));
+                dRow.Table.Columns.Add("Connection_Group_Count", typeof(int));
+                dRow.Table.Columns.Add("Total_Connections", typeof(int));
+            }
+        }
+
+
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            init();
             PrintConnections(HttpContext.Current.Response);
 
-            if (!IsPostBack)
-            {
-                dtConnection = new DataTable();
-                dtConnection.Columns.Add("Service_Point", typeof(string));
-                dtConnection.Columns.Add("Connection_Limit", typeof(int));
-                dtConnection.Columns.Add("Reported_Connections", typeof(int));
-                dtConnection.Columns.Add("Connection_Group_Count", typeof(int));
-                dtConnection.Columns.Add("Total_Connections", typeof(int));
-            }
+
         }
 
 
@@ -121,6 +128,19 @@
             var connectionGroups = value.Keys.Cast<object>().ToList();
             var totalConnections = 0;
 
+            /*dRow.Table.Columns.Add("Service_Point", typeof(string));
+             dRow.Table.Columns.Add("Connection_Limit", typeof(string));
+             dRow.Table.Columns.Add("Reported_Connections", typeof(string));
+             dRow.Table.Columns.Add("Connection_Group_Count", typeof(string));
+             dRow.Table.Columns.Add("Total_Connections", typeof(string));    */
+            dtConnection = new DataTable();
+            dRow = dtConnection.NewRow();
+             dRow.Table.Columns.Add("Service_Point", typeof(string));
+             dRow.Table.Columns.Add("Connection_Limit", typeof(int));
+             dRow.Table.Columns.Add("Reported_Connections", typeof(int));
+             dRow.Table.Columns.Add("Connection_Group_Count", typeof(int));
+             dRow.Table.Columns.Add("Total_Connections", typeof(int));
+
 
 
             foreach (var key in connectionGroups)
@@ -133,14 +153,22 @@
                 totalConnections += listValue.Count;
             }
 
-            dRow = dtConnection.NewRow();
+
+
             dRow["Service_Point"] = sp.Address;
             dRow["Connection_Limit"] = sp.ConnectionLimit;
             dRow["Reported_Connections"] = sp.CurrentConnections;
             dRow["Connection_Group_Count"] = connectionGroups.Count;
             dRow["Total_Connections"] = totalConnections;
 
-            dtConnection.Rows.Add(dRow);
+            if (dtConnection.Rows.Count==0)
+            {
+                dtConnection.Rows.Add(dRow);
+            }
+
+
+
+
             gdView.DataSource = dtConnection;
             gdView.DataBind();
 
