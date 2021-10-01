@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Debug="true" %>
+<%@ Page Language="C#" AutoEventWireup="true" Debug="true" %>
 
 <%@ Import Namespace="System.Reflection" %>
 <%@ Import Namespace="System.Net" %>
@@ -180,8 +180,7 @@
 
 </head>
 <body>
-TempData["msg"] = "<script>alert('To see results here, please make sure you already have clicked "Socket Connections Leak" in the home page before comming here');</script>";
-@Html.Raw(TempData["msg"])
+
     <form id="form1" runat="server">
         <div class="navbar navbar-inverse navbar-fixed-top" style="border-bottom: 3px solid orange; background-color: #006699">
             <div class="container" style="padding: 0; margin-left: 20px; padding-right: 20px; width: 100%">
@@ -191,7 +190,7 @@ TempData["msg"] = "<script>alert('To see results here, please make sure you alre
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" style="float: right">
                         <li>
-                            <a style="color: white" href="mailto:anilpras@microsoft.com">Contact</a>
+                            <a style="color: white" href="mailto:dorianivc1@gmail.com">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -204,10 +203,11 @@ TempData["msg"] = "<script>alert('To see results here, please make sure you alre
                         <div class="tab-pane active" id="sites">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <div style="width: 120px; background-color: #006699; color: white; padding-left: 10px">What CLI does:</div>
+                                    <div style="width: 120px; background-color: #006699; color: white; padding-left: 10px">What DSL does:</div>
                                     <div style="width: 100%; border: 1px solid black; padding: 10px; margin-bottom: 30px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-top-color: orange">
                                         <p>
-                                            <b>Detect Socket Leak (DSL)</b> finds the connection(socket leak) if the web application has used SYSTEM.NET class to initiate the connections, ref. GitHub code <a href="https://github.com/WadGraphEs/AzurePlot/blob/a2e028e18a113de231dcf064f916b66f25b97e14/AzurePlot/AzurePlot.Lib/ServicePointMonitor.cs">code</a>, *DO NOT* use this page to troubleshoot database connection leak or issues, this is specific to the SYSTEM.NET. 
+                                            <b>Detect Socket Leak (DSL)</b> finds the connection(socket leak) if the web application has used SYSTEM.NET class to initiate the connections, ref. GitHub code <a href="https://github.com/WadGraphEs/AzurePlot/blob/a2e028e18a113de231dcf064f916b66f25b97e14/AzurePlot/AzurePlot.Lib/ServicePointMonitor.cs">code</a>, *DO NOT* use this page to troubleshoot database connection leak or issues, this is specific to the SYSTEM.NET.
+                                            Please make sure you already have produced random connections by clicking <a href="/Home/spikeTCP" target="_blank" > here</a> and refresh the site typing F5 or clicking <a href="PrintConnectionsSummary.aspx"> here </a>
                                         </p>
                                     </div>
 
